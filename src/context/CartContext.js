@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect, useReducer } from "react";
+import { createContext, useState, useEffect, useReducer, useContext } from "react";
 
 export const CartContext = createContext({
     items: [],
@@ -121,5 +121,7 @@ export default function CartContextProvider({children}){
 
     return <CartContext.Provider value={ctx}>
         {children}
+        
     </CartContext.Provider>
+    
 }
