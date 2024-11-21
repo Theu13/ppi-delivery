@@ -1,30 +1,29 @@
-import { useContext } from "react";
-import { CartContext } from "./CartContext";
 
-export default function Cart() {
-    const { items, updateItemQuantity } = useContext(CartContext);
+import { CartContext } from "../context/CartContext";
+import React from "react";
+
+export default function Cart({ id, thumbnail, title, price, quantity, onUpdateQuantity }) {
+
 
     return (
         <div>
-            <h2>Seu Carrinho</h2>
-            {items.length === 0 ? (
-                <p>O carrinho está vazio.</p>
-            ) : (
-                <ul>
-                    {items.map((item) => (
-                        <li key={item.id}>
-                            <img src={item.thumbnail} alt={item.title} width="50" />
-                            <p>{item.title}</p>
-                            <p>Preço: {item.price}</p>
-                            <p>Quantidade: {item.quantity}</p>
-                            <p>Subtotal: {(item.price * item.quantity).toFixed(2)}</p>
-                            
-                            <button onClick={() => updateItemQuantity(item.id, 1)}>+</button>
-                            <button onClick={() => updateItemQuantity(item.id, -1)}>-</button>
-                        </li>
-                    ))}
-                </ul>
-            )}
+
+        <li key={id} className="cart-item" id="cart-items">
+            
+            <div>
+            <img src={thumbnail} alt= {thumbnail} width="250" />
+                <h3>{title}</h3>
+                <label>Price: ${price}</label>
+                <div className="cart-item-actions">
+                    <button  onClick={() => onUpdateQuantity(id, -1)}>-</button>
+                    <p> {quantity} </p>
+                    <button  onClick={() => onUpdateQuantity(id, 1)}>+</button>
+                </div>
+                <div>
+                <label >Total  Price: ${price*quantity}</label>
+                </div>
+            </div>
+        </li>
         </div>
     );
 }
