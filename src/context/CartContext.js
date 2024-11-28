@@ -1,51 +1,70 @@
 import { createContext, useState, useEffect, useReducer } from "react";
+import { supabase } from "../utils/supabase";
 
 export const CartContext = createContext({
     items: [],
     products: [],
     loading: false,
     error: "",
-    addItemToCart: () => {},
-    updateItemQuantity: () => {},
+    addItemToCart: () => { },
+    updateItemQuantity: () => { },
 });
 
-export default function CartContextProvider({children}){
-    
-    const [products, setProducts] = useState ([]);
+export default function CartContextProvider({ children }) {
+
+    const [products, setProducts] = useState([]);
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        async function fetchProducts() {
+
+        async function getProducts() {
             setLoading(true);
-
-            const response = await fetch("https://dummyjson.com/products/category/laptops?limit=12&select=id,thumbnail,title,price,description");
-            if (response.ok) {
-                const result = await response.json();
-                setProducts(result.products);
+            const { data: products, error } = await supabase.from("products").select();
+            if (products.length > 0) {
+                setProducts(products);
             } else {
-                setError("Fatch FAILED!");
+                setError(`Fetcing products failed ${error}`);
             }
-
             setLoading(false);
         }
+        getProducts();
 
-        fetchProducts();
-    }, []);
+
+
+
+        // async function fetchProducts() {
+        //     setLoading(true);
+
+        //     const response = await fetch("https://dummyjson.com/products/category/laptops?limit=12&select=id,thumbnail,title,price,description");
+        //     if (response.ok) {
+        //         const result = await response.json();
+        //         setProducts(result.products);
+        //     } else {
+        //         setError("Fatch FAILED!");
+        //     }
+
+        //     setLoading(false);
+        // }
+
+        // fetchProducts();
+        },
+
+        []);
 
     // Shopping Cart
 
-    function cartReducer(state, action){
-        if(action.type === "ADD_ITEM") {
-            const updatedItems = [ ...state.items];
+    function cartReducer(state, action) {
+        if (action.type === "ADD_ITEM") {
+            const updatedItems = [...state.items];
 
             const existingCartItemIndex = updatedItems.findIndex(
                 (item) => item.id === action.payload.id
             );
 
-            const existingCartItem = updatedItems[ existingCartItemIndex ];
+            const existingCartItem = updatedItems[existingCartItemIndex];
 
-            if(existingCartItem) {
+            if (existingCartItem) {
                 const updatedItem = {
                     ...existingCartItem,
                     quantity: existingCartItem.quantity + 1,
@@ -68,26 +87,26 @@ export default function CartContextProvider({children}){
             return { items: updatedItems };
         }
 
-        if(action.type === "UPDATE_ITEM") {
-            const updatedItems = [ ...state.items];
+        if (action.type === "UPDATE_ITEM") {
+            const updatedItems = [...state.items];
 
             const updatedItemIndex = updatedItems.findIndex(
                 (item) => item.id === action.payload.id
             );
 
-            const updatedItem = {...updatedItems[updatedItemIndex]}
+            const updatedItem = { ...updatedItems[updatedItemIndex] }
 
             updatedItem.quantity += action.payload.amount;
 
-            if(updatedItem.quantity < 1){
+            if (updatedItem.quantity < 1) {
                 updatedItems.splice(updatedItemIndex, 1);
             } else {
                 updatedItems[updatedItemIndex] = updatedItem;
             }
 
-            return { ...state, items: updatedItems};
+            return { ...state, items: updatedItems };
         }
-        
+
         return state;
     }
 
@@ -96,17 +115,17 @@ export default function CartContextProvider({children}){
         { items: [] }
     );
 
-    function handleAddItemToCart(id){
+    function handleAddItemToCart(id) {
         cartDispatch({
             type: "ADD_ITEM",
-            payload: {id, products}
+            payload: { id, products }
         });
     }
 
-    function handleUpdateCartItemQuantity(id, amount){
+    function handleUpdateCartItemQuantity(id, amount) {
         cartDispatch({
             type: "UPDATE_ITEM",
-            payload: {id, amount}
+            payload: { id, amount }
         });
     }
 
