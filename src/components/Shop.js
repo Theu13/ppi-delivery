@@ -96,9 +96,7 @@ export default function Shop() {
 
             </div>
 
-            <div className="box-category">
-                <h1>ALIMENTOS</h1>
-            </div>
+            
 
             {error && <p>{error}</p>}
             {loading && (
