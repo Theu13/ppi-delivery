@@ -136,10 +136,13 @@ h1 {
 }
 
 .products-lista1 {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  border: 1px solid red;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 2rem;
+  justify-items: center;
   
 }
 
