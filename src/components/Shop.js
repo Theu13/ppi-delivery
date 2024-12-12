@@ -101,7 +101,7 @@ export default function Shop() {
 
             </div>
 
-            
+
 
             {error && <p>{error}</p>}
             {loading && (
@@ -119,18 +119,18 @@ export default function Shop() {
                         </div>
 
 
-                       
-                            <ul className="products-lista1">
-                                {products.map((product) => (
-                                    <li key={product.id}>
-                                        <Product
-                                            {...product}
-                                            openModal={openModal}
-                                        />
-                                    </li>
-                                ))}
-                            </ul>
-                        
+
+                        <ul className="products-lista1">
+                            {products.map((product) => (
+                                <li key={product.id}>
+                                    <Product
+                                        {...product}
+                                        openModal={openModal}
+                                    />
+                                </li>
+                            ))}
+                        </ul>
+
 
 
 
@@ -138,9 +138,11 @@ export default function Shop() {
                     </div>
                 ))
             ) : (
-                <p>Not found!</p>
+                <div className="notfound">
+                    <p >Lamentamos muito, mas não encontramos esse item :[</p>
+                </div>
             )}
-
+            {/* 
             <div className="alimentos">
                 <h1>BEBIDAS</h1>
             </div>
@@ -165,16 +167,16 @@ export default function Shop() {
                 )}
 
 
-            </ul>
+            </ul> */}
 
-           
+
             <div className="footer">
                 <p>Produzido por Bruna Aysha | Letícia Karen | Luana Kelly | Ludmylla Karen | Matheus de Lima</p>
                 <div className="icons-footer">
-                <JavascriptIcon />  
-                <HtmlIcon />
-                <CssIcon />
-                <GitHubIcon />
+                    <JavascriptIcon />
+                    <HtmlIcon />
+                    <CssIcon />
+                    <GitHubIcon />
                 </div>
             </div>
 
@@ -182,6 +184,6 @@ export default function Shop() {
 
         </section>
 
-        
+
     );
 }
