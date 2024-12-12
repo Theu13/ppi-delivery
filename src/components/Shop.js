@@ -115,6 +115,7 @@ export default function Shop() {
                             <h1>{category}</h1>
                         </div>
 
+<<<<<<< HEAD
 
                        
                             <ul className="products-lista1">
@@ -131,6 +132,18 @@ export default function Shop() {
 
 
 
+=======
+                        <ul className="products-lista1">
+                            {products.map((product) => (
+                                <li key={product.id} className="item-lista">
+                                    <Product
+                                        {...product}
+                                        openModal={openModal}
+                                    />
+                                </li>
+                            ))}
+                        </ul>
+>>>>>>> b40dcd0 (Responsividade Ok)
 
                     </div>
                 ))
