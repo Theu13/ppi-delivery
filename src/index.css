@@ -106,10 +106,6 @@ h1 {
 }
 
 .box-promocao {
-  width: 100%;
-  border: 1px solid red;
-  display: flex;
-  justify-content: center;
 }
 
 .category-section {
@@ -132,7 +128,6 @@ h1 {
 
 
 .products-lista {
-  margin: 20px 30px 20px 30px;
 }
 
 .products-lista1 {
@@ -142,7 +137,6 @@ h1 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   gap: 2rem;
-  justify-items: center;
   
 }
 
