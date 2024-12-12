@@ -19,26 +19,63 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 
 export default function Header() {
 
-    const { items } = useContext(CartContext);
-    
+
+
+    const { items, session } = useContext(CartContext);
+
     const cartQuantity = items.length;
 
-    
+
     return (
         <>
             <header id="main-header">
                 <div id="main-title">
-                    <h1>Elegant Shop</h1>
-                </div>
-                <p>
-                    <Link to="/checkout">
-                        <IconButton aria-label="cart" size="large">
-                            <StyledBadge badgeContent={cartQuantity}>
-                                <ShoppingCartIcon size="large"/>
-                            </StyledBadge>
-                        </IconButton>
+                    <Link to="/" className="link_home">
+                        <h1>Magnus Delivery</h1>
                     </Link>
-                </p>
+
+                    {session && (
+                        <Link to="/auth" className="link_auth">
+                            <h3>
+                                Magnus Delivery :D, {session.user.user_metadata.first_name}{" "}
+                                {session.user.user_metadata.last_name}
+                            </h3>
+                        </Link>
+                    )}
+
+                </div>
+                <div className="icons-list">
+          {!session && (
+            <>
+              <Link to="/auth">
+                <IconButton
+                  aria-label="cart"
+                  size="large"
+                  className="iconbutton"
+                >
+                  {/* <Login /> */}
+                </IconButton>
+              </Link>
+              <Link to="/signup">
+                <IconButton
+                  aria-label="cart"
+                  size="large"
+                  className="iconbutton"
+                >
+               {/* <AccountCircle /> */}
+                </IconButton>
+              </Link>
+            </>
+          )}
+
+          <Link to="/checkout">
+            <IconButton aria-label="cart" size="large" className="iconbutton">
+              <StyledBadge badgeContent={cartQuantity}>
+                <ShoppingCartIcon size="large" />
+              </StyledBadge>
+            </IconButton>
+          </Link>
+        </div>
             </header>
         </>
     );

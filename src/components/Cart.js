@@ -1,29 +1,47 @@
-
 import { CartContext } from "../context/CartContext";
-import React from "react";
+import { useContext } from "react";
 
-export default function Cart({ id, thumbnail, title, price, quantity, onUpdateQuantity }) {
+export default function Cart() {
+  const { items, updateItemQuantity } = useContext(CartContext);
 
+  const totalPrice = items.reduce(
+    (acc, item) => acc + item.price * item.quantity,
+    0
+  );
+  const formattedTotalPrice = `$${totalPrice.toFixed(2)}`;
 
-    return (
-        <div>
+  return (
+    <div id="cart">
+      <h1>Your cart</h1>
+      {items.length === 0 && <p>No items in cart!</p>}
+      {items.length > 0 && (
+        <ul id="cart-items">
+          {items.map((item) => {
+            const formattedPrice = `$${item.price.toFixed(2)}`;
 
-        <li key={id} className="cart-item" id="cart-items">
-            
-            <div>
-            <img src={thumbnail} alt= {thumbnail} width="250" />
-                <h3>{title}</h3>
-                <label>Price: ${price}</label>
-                <div className="cart-item-actions">
-                    <button  onClick={() => onUpdateQuantity(id, -1)}>-</button>
-                    <p> {quantity} </p>
-                    <button  onClick={() => onUpdateQuantity(id, 1)}>+</button>
-                </div>
+            return (
+              <li key={item.id}>
                 <div>
-                <label >Total  Price: ${price*quantity}</label>
+                  <span>{item.title}</span>
+                  <span> ({formattedPrice})</span>
                 </div>
-            </div>
-        </li>
-        </div>
-    );
+                <div className="cart-item-actions">
+                  <button onClick={() => updateItemQuantity(item.id, -1)}>
+                    -
+                  </button>
+                  <span>{item.quantity}</span>
+                  <button onClick={() => updateItemQuantity(item.id, 1)}>
+                    +
+                  </button>
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+      )}
+      <p id="cart-total-price">
+        Cart Total: <strong>{formattedTotalPrice}</strong>
+      </p>
+    </div>
+  );
 }

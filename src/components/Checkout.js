@@ -1,49 +1,66 @@
-import { useContext } from "react";
-import { CartContext } from "../context/CartContext";
-import Cart from "./Cart";
 import { Link } from "react-router-dom";
+import { CartContext } from "../context/CartContext";
+import { useContext } from "react";
 
 export default function Checkout() {
-    const { items, updateItemQuantity } = useContext(CartContext); // Obtém os itens e a função de atualização
+  const { items, updateItemQuantity } = useContext(CartContext);
 
-    const totalPrice = items.reduce(
-        (total, item) => total + item.price * item.quantity,
-        0
-    );
+  const totalPrice = items.reduce(
+    (acc, item) => acc + item.price * item.quantity,
+    0
+  );
+  const formattedTotalPrice = `US$ ${totalPrice.toFixed(2)}`;
 
-    return (
-        <section className="checkout" id="checkout">
-            <h1 id="checkout">Checkout</h1>
+  return (
+    // <div className="checkout">
+    //   <h1>Checkout - US$ {formattedTotalPrice}</h1>
+    //   {items.map((item) => {
+    //     return (
+    //       <>
+    //         <h2>{item.name}</h2>
+    //         <p>US$ {item.price}</p>
+    //       </>
+    //     );
+    //   })}
+    //   <Link to="/" className="product-actions">
+    //     <button>RETURN</button>
+    //   </Link>
+    // </div>
+    <div className="checkout">
+      <h1>Checkout</h1>
+      {items.length === 0 && <p>Não há itens em seu carrinho!</p>}
+      {items.length > 0 && (
+        <ul className="checkout-items">
+          {items.map((item) => {
+            const formattedPrice = `US$ ${item.price.toFixed(2)}`;
 
-            {items.length > 0 ? (
-                <div className="checkout-items">
-                    <ul>
-                        {items.map((product) => (
-
-                             <Cart
-                                id={product.id}
-                                thumbnail={product.thumbnail}
-                                title={product.title}
-                                price={product.price}
-                                quantity={product.quantity}
-                                item={product}
-                                onUpdateQuantity={updateItemQuantity}
-                            />
-
-                          
-                        ))}
-                    </ul>
-                    <div className="total">
-                        <h2 id="cart-total-price">Total Cart: ${totalPrice.toFixed(2)}</h2>
-                    </div>
+            return (
+              <li key={item.id}>
+                <div>
+                  <img src={item.thumbnail} alt={item.title} />
+                  <span>{item.title}</span>
+                  <span> {formattedPrice}</span>
+                  <div className="cart-item-actions">
+                    <button onClick={() => updateItemQuantity(item.id, -1)}>
+                      -
+                    </button>
+                    <span>{item.quantity}</span>
+                    <button onClick={() => updateItemQuantity(item.id, 1)}>
+                      +
+                    </button>
+                  </div>
                 </div>
-            ) : (
-                <p>Your cart is empty.</p>
-            )}
-
-            <Link to="/" className="product-actions">
-                <button>RETURN</button>
-            </Link>
-        </section>
-    );
+              </li>
+            );
+          })}
+        </ul>
+      )}
+      <p id="cart-total-price">
+        Cart Total: <strong>{formattedTotalPrice}</strong>
+      </p>
+      <Link to="/" className="product-actions1">
+        <button>RETURN</button>
+      </Link>
+    </div>
+  );
 }
