@@ -95,12 +95,6 @@ export default function Shop() {
                 </div>
             )}
 
-            <div className="box-promocao">
-                <p> Ofetas Diárias </p>
-
-
-            </div>
-
 
 
             {error && <p>{error}</p>}
