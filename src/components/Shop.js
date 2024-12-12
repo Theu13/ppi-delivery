@@ -4,6 +4,11 @@ import { CircularProgress } from "@mui/material";
 import { CartContext } from "../context/CartContext";
 import Modal from "./Modal.js";
 
+import JavascriptIcon from '@mui/icons-material/Javascript';
+import HtmlIcon from '@mui/icons-material/Html';
+import CssIcon from '@mui/icons-material/Css';
+import GitHubIcon from '@mui/icons-material/GitHub';
+
 import styles from "./Shop.module.css"
 import Cart from "./Cart";
 import ProductModal from "./ProductModal";
@@ -162,16 +167,21 @@ export default function Shop() {
 
             </ul>
 
-            <div className="alimentos">
-                <h1>Higiene e Beleza</h1>
-            </div>
-
-            <div className="alimentos">
-                <h1>Limpeza</h1>
+           
+            <div className="footer">
+                <p>Produzido por Bruna Aysha | Letícia Karen | Luana Kelly | Ludmylla Karen | Matheus de Lima</p>
+                <div className="icons-footer">
+                <JavascriptIcon />  
+                <HtmlIcon />
+                <CssIcon />
+                <GitHubIcon />
+                </div>
             </div>
 
 
 
         </section>
+
+        
     );
 }

@@ -95,7 +95,7 @@ h1 {
 
 #shop {
   width: 100%;
-  margin: 5rem auto;
+  margin-top: 5rem ;
 }
 
 #shop h2 {
@@ -675,5 +675,23 @@ h1 {
     width: 100%;
     padding: 1rem;
   }
+}
+
+.footer {
+  margin-top: 3rem;
+  width: 100%;
+  background-color: #1674bc;
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.icons-footer {
+  width: 10rem;
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
 }
 
