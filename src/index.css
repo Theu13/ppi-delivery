@@ -681,17 +681,22 @@ h1 {
   margin-top: 3rem;
   width: 100%;
   background-color: #1674bc;
-  height: 8rem;
+  height: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  p {
+    margin: 0px 30px 0px 30px;
+
+  }
 }
 
 .icons-footer {
   width: 10rem;
   display: flex;
-  margin-top: 10px;
+  margin-top: 5px;
   justify-content: space-between;
 }
 
