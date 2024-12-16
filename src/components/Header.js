@@ -45,37 +45,16 @@ export default function Header() {
 
                 </div>
                 <div className="icons-list">
-          {!session && (
-            <>
-              <Link to="/auth">
-                <IconButton
-                  aria-label="cart"
-                  size="large"
-                  className="iconbutton"
-                >
-                  {/* <Login /> */}
-                </IconButton>
-              </Link>
-              <Link to="/signup">
-                <IconButton
-                  aria-label="cart"
-                  size="large"
-                  className="iconbutton"
-                >
-               {/* <AccountCircle /> */}
-                </IconButton>
-              </Link>
-            </>
-          )}
 
-          <Link to="/checkout">
-            <IconButton aria-label="cart" size="large" className="iconbutton">
-              <StyledBadge badgeContent={cartQuantity}>
-                <ShoppingCartIcon size="large" />
-              </StyledBadge>
-            </IconButton>
-          </Link>
-        </div>
+
+                    <Link to="/checkout">
+                        <IconButton aria-label="cart" size="large" className="iconbutton">
+                            <StyledBadge badgeContent={cartQuantity}>
+                                <ShoppingCartIcon size="large" />
+                            </StyledBadge>
+                        </IconButton>
+                    </Link>
+                </div>
             </header>
         </>
     );

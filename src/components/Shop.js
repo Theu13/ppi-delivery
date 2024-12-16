@@ -80,7 +80,7 @@ export default function Shop() {
                         ref={searchInput}
                         className="search-input"
                         type="text"
-                        placeholder="Type to search..."
+                        placeholder="Pesquisar por item..."
                         onChange={handleSearch}
                     />
                     <button className="clear-button " onClick={clearSearch}>CLEAR</button>

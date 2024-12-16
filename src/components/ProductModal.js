@@ -9,7 +9,7 @@ export default function ProductModal({ id, thumbnail, title, price, description 
 
     return (
         <article className="modalproduct" >
-            <img src={thumbnail} alt={title} />
+            <img src={thumbnail} alt={title} className="imgmodal"/>
             <div className="product-content">
                 <div>
                     <h3>{title}</h3>

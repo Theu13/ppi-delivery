@@ -1,4 +1,3 @@
-
 create table
   products (
     id serial primary key,
@@ -9,119 +8,369 @@ create table
     category VARCHAR(50) not null DEFAULT 'uncategorized'
   );
 
-insert into
-  products (thumbnail, title, price, description, category)
-values
-  (
-    'https://cdn.dummyjson.com/products/images/fragrances/Calvin%20Klein%20CK%20One/thumbnail.png',
-    'Calvin Klein CK One',
-    900.99,
-    'CK One by Calvin Klein is a classic unisex fragrance, known for its fresh and clean scent. It''s a versatile fragrance suitable for everyday wear.',
-    'perfume'
-  ),
-  (
-    'https://cdn.dummyjson.com/products/images/fragrances/Chanel%20Coco%20Noir%20Eau%20De/thumbnail.png',
-    'Chanel Coco Noir Eau De Toilet',
-    129.99,
-    'Coco Noir by Chanel is an elegant and mysterious fragrance, featuring notes of grapefruit, rose, and sandalwood. Perfect for evening occasions.',
-    'perfume'
-  ),
-  (
-    'https://cdn.dummyjson.com/products/images/fragrances/Dior%20J''adore/thumbnail.png',
-    'Dior J''adore',
-    89.99,
-    'J''adore by Dior is a luxurious and floral fragrance, known for its blend of ylang-ylang, rose, and jasmine. It embodies femininity and sophistication.',
-    'perfume'
-  ),
-  (
-    'https://cdn.dummyjson.com/products/images/fragrances/Dolce%20Shine%20Eau%20de/thumbnail.png',
-    'Dolce Shine Eau de Parfum',
-    69.99,
-    'Dolce Shine by Dolce & Gabbana is a vibrant and fruity fragrance, featuring notes of mango, jasmine, and blonde woods. It''s a joyful and youthful scent.',
-    'perfume'
-  ),
-  (
-    'https://cdn.dummyjson.com/products/images/fragrances/Gucci%20Bloom%20Eau%20de/thumbnail.png',
-    'Gucci Bloom Eau de Parfum',
-    79.99,
-    'Gucci Bloom by Gucci is a floral and captivating fragrance, with notes of tuberose, jasmine, and Rangoon creeper. It''s a modern and romantic scent.',
-    'perfume'
-  );
-
-insert into
-  products (thumbnail, title, price, description, category)
-values
-(
-
-      'https://cdn.dummyjson.com/products/images/womens-bags/Blue%20Women''s%20Handbag/thumbnail.png',
-      'Blue Women''s Handbag',
-      49.99,
-      'The Blue Women''s Handbag is a stylish and spacious accessory for everyday use. With a vibrant blue color and multiple compartments, it combines fashion and functionality.',
-    'bolsas'
-),
-    (
-      'https://cdn.dummyjson.com/products/images/womens-bags/Heshe%20Women''s%20Leather%20Bag/thumbnail.png',
-      'Heshe Women''s Leather Bag',
-      129.99,
-      'The Heshe Women''s Leather Bag is a luxurious and high-quality leather bag for the sophisticated woman. With a timeless design and durable craftsmanship, it''s a versatile accessory.',
-    'bolsas'
-    ),
-    (
-      'https://cdn.dummyjson.com/products/images/womens-bags/Prada%20Women%20Bag/thumbnail.png',
-      'Prada Women Bag',
-      599.99,
-      'The Prada Women Bag is an iconic designer bag that exudes elegance and luxury. Crafted with precision and featuring the Prada logo, it''s a statement piece for fashion enthusiasts.',
-    'bolsas'
-    ),
-    (
-     'https://cdn.dummyjson.com/products/images/womens-bags/White%20Faux%20Leather%20Backpack/thumbnail.png',
-      'White Faux Leather Backpack',
-      39.99,
-      'The White Faux Leather Backpack is a trendy and practical backpack for the modern woman. With a sleek white design and ample storage space, it''s perfect for both casual and on-the-go styles.',
-    'bolsas'
-    ),
-    (
-      'https://cdn.dummyjson.com/products/images/womens-bags/Women%20Handbag%20Black/thumbnail.png',
-      'Women Handbag Black',
-      59.99,
-      'The Women Handbag in Black is a classic and versatile accessory that complements various outfits. With a timeless black color and functional design, it''s a must-have in every woman''s wardrobe.',
-    'bolsas'
-    );
-
-insert into 
+  insert into 
     products (thumbnail, title, price, description, category)
     values (
         'https://phygital-files.mercafacil.com/comercial-big-oferta/uploads/produto/ma_a_nacional_kg_5ddc8fd8-97e6-4b9d-8e5e-f85afb1c1b4b.png',
-        'Maçã 1KG',
-        10.56,
-        'Essa maçã é de boa qualidade, se comprar não vai arrepender, ela faz bem para a gengiva.',
+        'Maçã Nacional 1KG',
+      12.98,
+        'Maçã Nacional (Hortifruti): R$ 2.10 Unidade.',
+        'alimentos'
+    ),
+   (
+        'https://www.galaxcommerce.com.br/sistema/upload/4188/produtos/cebola-branca-extra-400g_2024-08-28_09-24-51_0_307.png',
+        'Cebola Branca 1KG',
+    9.99,
+        'Cebola Branca (Hortifruti): R$ 2.20 Unidade.',
+        'alimentos'
+    ),
+   (
+        'https://i.pinimg.com/736x/bf/fa/fd/bffafd91d66d44ac6b69d22f5d5fef0b.jpg',
+        'Batata Inglesa 1KG',
+     7.99,
+        'Batata Inglesa (Hortifruti): R$ 1.80 Unidade.',
+        'alimentos'
+    ), 
+    (
+        'https://i.pinimg.com/736x/d5/b9/39/d5b9395845fe895ce4091ebe3af8066b.jpg',
+        'Tomate 1KG',
+    4.98,
+        'Tomate (Horttifruti): R$ 1.30 Unidade.',
+        'alimentos'
+    ), 
+  (
+        'https://i.pinimg.com/736x/b0/a9/24/b0a924eba108eef2be4371e0bf84ea67.jpg',
+        'Melancia 1KG',
+  3.99,
+        'Melancia (Horttifruti): R$ 28.98  Unidade.',
+        'alimentos'
+    ),
+   (
+        'https://acdn.mitiendanube.com/stores/004/372/426/products/muss400g-52-8a8b3cdb1c4ea960f317111258025310-640-0.png',
+        'Picanha Bovina 1KG',
+ 99.99,
+        'Picanha bovina é parte da alcatra, de onde se retiram também o miolo da alcatra e a maminha. Bastante marmorizada, sua famosa capa de gordura garante sabor acentuado ao corte.',
+        'alimentos'
+    ),
+   (
+        'https://www.supermercadosbh.com.br/wp-content/uploads/2020/03/site_carne.jpg',
+        'Maminha Bovina 1KG',
+ 89.75,
+        'Maminha Bovina é uma carne magra e supermacia, com uma capa de gordura menor comparado à picanha e a à fraldinha.',
+        'alimentos'
+    ),
+   (
+        'https://io.convertiez.com.br/m/superpaguemenos/shop/products/images/27510/medium/file-de-peito-de-frango-seara-congelado-1kg_72678.jpg',
+        'Filé de Peito de Frango Seara Congelado 1KG',
+ 25.99,
+        'Melancia (Hortifruti): R$ 29.98 Unidade.',
         'alimentos'
     ),
     (
-    'https://phygital-files.mercafacil.com/armazem-maria/uploads/produto/cenoura_kg_a2254523-58a7-4f72-8d8d-a267f2223f3f.jpg',,
+    'https://phygital-files.mercafacil.com/armazem-maria/uploads/produto/cenoura_kg_a2254523-58a7-4f72-8d8d-a267f2223f3f.jpg',
     'Cenoura 1KG',
-    13.98,
-    'Essa cenoura é muito boa, ja comi e recomendo.'
+    13.99,
+    'Cenoura (Hortifruti): R$ 2.90 Unidade.',
     'alimentos'
+    ),
+ (
+        'https://i.pinimg.com/736x/3b/3c/a9/3b3ca9769d1195028f08dacfcb022f83.jpg',
+        'Lasanha de Calabresa Seara Congelada 600g',
+ 15.99,
+        'Lasanha Congelada Calabresa Seara 600g tem sabor marcante pois é preparada com Linguiça Calabresa Seara, defumada naturalmente, e saboroso molho de tomate refogado com manjericão e especiarias naturais.',
+        'alimentos'
+    ),
+(
+        'https://i.pinimg.com/736x/cb/39/46/cb3946de5929873014e8dcddafb33d6e.jpg',
+        'Presunto Cozido Fatiado Seara 3.5KG', 
+22.50,
+        'Presunto Cozido sem capa de gordura inteiro Seara 3.5KG',
+        'alimentos'
+    ),
+(
+        'https://lojaqui.com.br/images/produtos/site/48525.jpg',
+        'Presunto Cozido Fatiado Seara 200g', 
+8.49,
+        'Presunto cozido sem capa de gordura fatiado aurora pacote 200g',
+        'alimentos'
+    ),
+(
+        'https://i.pinimg.com/736x/60/48/8e/60488e522561d176c536a622758f0f5a.jpg',
+        'Queijo Prato Três Marias Fatiado 250g', 
+18.90,
+        'O queijo mussarela tem origem italiana. Massa filada, textura macia e um sabor ligeiramente salgado. Quando levado ao forno seu derretimento e uniformidade realçam o paladar do jeito que só a Três Marias sabe fazer',
+        'alimentos'
+    ),
+(
+        'https://i.pinimg.com/736x/05/14/4e/05144e1c9ac82a92d43d6b734d59383b.jpg',
+        'Queijo Coalho Puro Leite Lanche 450g', 
+49.90,
+        'O Queijo de Coalho é ideal para acompanhar os tradicionais churrascos, servir como petiscos. Também pode ser servido em pratos acompanhados com mel e outros condimentos. Trata-se de um queijo levemente salgado, de massa compacta. Quando assado apresenta característica crocante por fora e cremoso por dentro.',
+        'alimentos'
+    ),
+  (
+    'https://i.pinimg.com/736x/e8/ff/ed/e8ffed0577dacaa4f54f1558f182f7c8.jpg',
+    'Sprite 2L',
+  9.99,
+    'É uma bebida popular entre pessoas de todas as idades. É uma boa fonte de vitamina C e é baixo em calorias e gordura. Esse refrigerante também é uma boa escolha para pessoas que estão tentando evitar cafeína.',
+    'bebidas'
     ),
     (
     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPU7Q272rJ_Q5ELlIG76-btPut8CioFhmv7xfEd_saZ7A5Bud17qVCvSVDGslhpujm_k8&usqp=CAU',
-    'Coca-Cola 2L'
-    9.49,
-    'Colca-cola de 2L muito boa mas mata se beber muito, compre muita mas beba moderadamente.',
+    'Coca-Cola 2L',
+   12.99,
+    'Refrigerante Coca-cola Pet 2 Litros.',
     'bebidas'
     ),
     (
     'https://cdn1.toplojas.com.br/loja/WAssets/446/Produtos/908059/Fotos/G_guarana-pantucci-e2464c.jpg',
-    'Guaraná 2L'
-    9.51,
-    'Guaraná 2L bem bom, bem docinho para tomar acompanhado com aquele almoço bem bom.',
+    'Guaraná Antárctica 2L',
+   10.99,
+    'Refrigerante Guaraná Antárctica Pet 2 Litros.',
     'bebidas'    
     ),
     (
     'https://i.pinimg.com/736x/0d/e6/d3/0de6d3ee636ca6d0f3281291045949e0.jpg',
-    'Vassoura Sample',
-    5.98,
-    'Vassoura para você que se identifica como bruxa no 31/10.',
+    'Vassoura Condor',
+    11.80,
+    'Vassoura Condor Multiuso com cabo, nas cores preto e branco. Vassoura com cerdas sintéticas macias e cabo angulado, ideais para pisos delicados. Garantem a limpeza perfeita sem danificar os pisos de cerâmica, porcelanato, madeira e laminados.',
     'limpeza'
+    ),
+    (
+   'https://i.pinimg.com/736x/8b/d9/5c/8bd95cfdae3360300feaadacb65aa609.jpg',
+    'Vassoura Condor',
+    12.00,
+    'Vassoura Condor Multiuso, nas cores vermelho e preto. Multiuso e pronta para ajudar a eliminar a sujeira de todos os lates, de todos os lugares. É a escolha perfeita mas atividades diárias para sua casa ficar linda!',
+    'limpeza'
+    ),
+    (
+   'https://i.pinimg.com/736x/7d/16/95/7d1695d15b2aa2b9d064f2ed3d81e58e.jpg',
+    'Detergente Ypê 500ml',
+    2.99,
+    'O sucesso do Lava-Louças Ypê, líder na categoria, é resultado de um grande investimento em tecnologia. Sua fórmula reúne tudo o que se deseja de um lava-louças líquido: rendimento e eficiência de limpeza. Produto biodegradável e possui alto poder desengordurante. Pensando na segurança do consumidor, o produto possui pH neutro e é dermatologicamente testado. Ypê oferece Alto Poder Desengordurante em todas as versões da linha e possui tecnologias que facilitam o dia-a-dia.', 
+    'limpeza'
+    ),
+    (
+    'https://i.pinimg.com/736x/e5/1d/12/e51d1270ab3586cff4d10a1f42ab36b7.jpg',
+    'Detergente Limpol 500ml',
+    2.99,
+    'O lava-louças Limpol é eficiente no poder da limpeza e remoção da gordura e sujeiras, além de controlar o mau odor indesejado na cozinha. Sua fórmula é testada dermatologicamente, contém glicerina, que não agride a pele. Assim você ficará livre daquela gordura que fica nos pratos e louças sem precisar de muito esforço para essa limpeza, mantendo o cuidado com as mãos.',
+    'limpeza'
+    ),
+    (
+    'https://i.pinimg.com/736x/9d/f8/26/9df826ae2265c726ed987baf3c9c855b.jpg',
+    'Sabão em barra Aloe Vera Ypê 900g',
+    11.50,
+    'O Sabão em Barra Ypê é líder no mercado brasileiro e conta com tradição e qualidade que são transmitidas de geração em geração. Quem usa sabe que o Sabão em Barra Ypê cumpre com o que promete: remove as sujeiras mais difíceis e rende mais.',
+    'limpeza'
+    ),
+   (
+    'https://i.pinimg.com/736x/0d/c1/f2/0dc1f2d2914563e87d455a58bf5da903.jpg',
+    'Sabão em barra neutro Ypê 1KG',
+    12.75,
+    'O Sabão em Barra Ypê é líder no mercado brasileiro e conta com tradição e qualidade que são transmitidas de geração em geração. Quem usa sabe que o Sabão em Barra Ypê cumpre com o que promete: remove as sujeiras mais difíceis e rende mais.',
+    'limpeza'
+    ),
+    (
+    'https://i.pinimg.com/736x/5b/e0/02/5be0027cd27450a8a06a81160e00bcce.jpg',
+    'Sabão em pó OMO lavagem perfeita 800g',
+    14.90,
+    'O novo OMO foi totalmente reformulado e está mais poderoso, com seu pó ultrafino que permite remover as manchas de primeira, cuidar das cores e não deixa resíduos.',
+    'limpeza'
+    ),
+   (
+    'https://i.pinimg.com/736x/66/6c/c4/666cc46d0211343e861d186e00dd8e21.jpg',
+    'Sabão em pó OMO multiação pacote 1KG',
+    23,15,
+    'O Sabão em pó OMO é um produto indicado para a lavagem de roupas. Com sua fórmula exclusiva OMO é imbatível para remover manchas. Além de deixar as roupas limpas o sabão em pó OMO cuida das roupa e não estraga o tecido.',
+    'limpeza'
+    ),
+   (
+    'https://i.pinimg.com/736x/c6/b7/ff/c6b7ff846da955f27e13aac77dcf88b5.jpg',
+    'Sabão Líquido OMO multiação 5L',
+    80.99,
+    'O Sabão Líquido OMO 5L, combina rendimento e proteção proporcionando a melhor experiência na lavagem de suas roupas! O sabão OMO é um produto prático, eficiente e que deixa as roupas de toda  a família mais limpas, cheirosas e macias como se fossem novas. Ele tem alto rendimento, dá muito mais brilho e proteção para as roupas, se apresenta no formato líquido. Além disso tem fórmula feita com ativos altamente eficazes na remoção de manchas e sujeiras diversas.',
+    'limpeza'
+    ),
+   ( 
+    'https://i.pinimg.com/736x/12/65/d3/1265d3fb241092602ed3fa74a1ed726c.jpg',
+    'Sabão Líquido OMO lavagem perfeita 3L',
+    32.55,
+    'OMO Lavagem Perfeita é perfeito para manter suas roupas impecáveis, já que remove as manchas de primeira. A fórmula do sabão líquido OMO possui um perfume exclusivo que dura muito mais, isso tudo cuidando das cores dos tecidos e das suas roupas. O detergente OMO é imbatível na limpeza e cuida do meio ambiente, pois sua fórmula contém ativo biodegradável e não possui fosfato, ajudando a preservar rios e oceanos. O sabão líquido é 10x melhor no poder da limpeza e cuidado com as suas roupas e tecidos. OMO Lavagem Perfeita cuida das cores sem danificar os tecidos e deixa suas roupas com cheirinho de limpeza.',
+    'limpeza'
+    ),
+  ( 
+    'https://i.pinimg.com/736x/94/de/c9/94dec989d856cc97a39a9f7da19a82cb.jpg',
+    'Kit Sabão Líquido Urca 5L',
+   49.60,
+    'O Lava Roupas Líquido Urca Maxx foi desenvolvido para cuidar das roupas brancas e coloridas. O lava roupas líquido se adapta a todos os tipos de roupas. Excelente substituto do detergente em pó, ele é perfeito para quem busca praticidade e uma limpeza completa.',
+    'limpeza'
+    ),
+( 
+    'https://i.pinimg.com/736x/a3/a4/48/a3a448367d22a60c20522012a96627e4.jpg',
+    'Sabão Líquido Concentrado Ariel 2L',
+   49.90,
+    'O Sabão Líquido Ariel Concentrado Expert oferece a melhor limpeza de Ariel. A tecnologia de Ariel oferece uma limpeza profunda e ajuda a prevenir sinais de desgaste nas suas roupas através de sua fórmula com ingredientes exclusivos. Ele ainda penetra e cuida das fibras melhor que os pós. Com seus tensoativos biodegradáveis, o Lava Roupas Ariel Expert te ajuda a suavizar seus brancos amarelados.',
+    'limpeza'
+    ),
+   (
+    'https://i.pinimg.com/736x/77/5b/5b/775b5b24b687434978f5f577ead26e62.jpg',
+    'Kit Sabão Líquido Brilhante Higiene Total 3L',
+   60.99,
+    'O sabão líquido Brilhante Higiene Total é um lava-roupas que combina os melhores resultados de limpeza com o combate ao mau odor. A fórmula de Brilhante Higiene Total contém o poder das enzimas, proporcionando uma limpeza profunda e evitando que a sujeira se deposite nas roupas. Entre limpeza profunda e combate ao mau odor? Escolha os dois! Com o sabão líquido Brilhante Higiene Total, você sempre leva mais.',
+    'limpeza'
+    ),
+(
+    'https://i.pinimg.com/736x/3f/61/36/3f61365ee9f2ff701f07ca63c5c563f0.jpg',
+    'Sabão Líquido Brilhante Higiene Total 3L',
+   34.99,
+    'O Sabão Líquido Brilhante Higiene Total é um lava-roupas que combina os melhores resultados de limpeza com o combate ao mau odor. A fórmula de Brilhante Higiene Total contém o poder das enzimas, proporcionando uma limpeza profunda e evitando que a sujeira se deposite nas roupas. Entre limpeza profunda e combate ao mau odor? Escolha os dois! Com o sabão líquido Brilhante Higiene Total, você sempre leva mais.',
+    'limpeza'
+    ),
+( 
+    'https://i.pinimg.com/736x/8f/c7/14/8fc714f271c0d5e5938aec8dd5640709.jpg',
+    'Esponja Multiuso Brilhus Bettanin',
+   4.60,
+    'A Esponja Multiuso Brilhus Bettanin Leve 4 Pague 3 é o pacote mais econômico da linha. Com nova fórmula, mais durável, a esponja é multiuso e auxilia na limpeza da sua casa. Conta com a qualidade dos produtos Bettanin.',
+    'limpeza'
+    ),
+( 
+    'https://i.pinimg.com/736x/72/92/7b/72927b429b7171df4e412f6bb2d88802.jpg',
+    'Esponja Dupla Face Condor',
+   3.60,
+    'Altíssima qualidade, resultado nota 10! A Esponja Dupla Face da Condor é parceira ideal para lavar louças, panelas, tigelas, fogões, pias, cubas, entre outros. E agora com nova fórmula: tecnologia Antibac, que elimina até 99,9% das bactérias. Podem organizar a festa pois a limpeza está garantida!',
+    'limpeza'
+    ),
+   (
+    'https://i.pinimg.com/736x/ca/5a/43/ca5a43b0f4f849b2daa2743061cd3f4a.jpg',
+    'Sabonete em barra Francis Brasilidades Capim Limão 80g',
+  2.90,
+    'Celebre toda a leveza da Brasilidade em um banho de cores e cheiros, os cítricos vibrantes e majestosas notas florais abraçam toda a leveza refrescante do capim limão, com nuances de ervas aromáticas envoltas por acordes amadeirados e facetas adocicadas que te transportam para o coração da natureza onde a leve brisa percorre a sua pele deixando o seu banho muito mais refrescante e perfumado.',
+    'higiene'
+    ),
+   (
+    'https://i.pinimg.com/736x/7b/63/b7/7b63b719f6985b5969500245ad9bf195.jpg',
+    'Sabonete em Phebo 90g',
+4.99,
+    'Sabonete Phebo agora também em formato cubo, com embalagem moderna e diferenciada. Sabonete de glicerina com base 100% vegetal. Fragrâncias suaves e refrescantes para um toque macio.',
+    'higiene'
+    ),
+   (
+    'https://i.pinimg.com/736x/ca/5a/43/ca5a43b0f4f849b2daa2743061cd3f4a.jpg',
+    'Sabonete Francis Rosa Branca e Patchouli 90g',
+4.90,
+    'A Nova Linha Francis inova em seu mercado e chega com fragrâncias modernas e sofisticadas. Sua fórmula agora com base vegetal, aprimora a pureza dos novos perfumes. As barras continuam embaladas, uma a uma, com a delicadeza dos nossos lenços perfumados.',
+    'higiene'
+    ),
+   (
+    'https://i.pinimg.com/736x/c0/10/26/c010267246c82e14767a8f80c7196ee3.jpg',
+    'Desodorante Dove Original Aerosol 150ml',
+18.55,
+    'O Desodorante Dove Original oferece até 48 de proteção e maciez para sua pele. Ele garante axilas suave e bonitas em apenas 3 dias de uso. É perfeito para ser utilizado após o desgaste da depilação, por exemplo. Isso porque contém¼ de creme hidratante, vitaminas E e F, que ajudam a nutrir e a recuperar a pele danificada por lâmina e cera. Também fornece proteção contra os odores causados pela transpiração.',
+    'higiene'
+    ),
+   (
+    'https://i.pinimg.com/736x/51/e3/cd/51e3cd24b11232a937df03d3c0d3675f.jpg',
+    'Desodorante Aerosol Nivea 200ml Protect & Care',
+14.20,
+    'O Nivea Protect & Care é um desodorante feminino que vai além da proteção contra maus odores, proporcionando o cuidado característico da Nivea. Oferece 48 horas de proteção confiável e um cuidado suave e intenso para a pele. Com a reconhecida fragrância do Nivea creme, ele cuida das suas axilas de maneira completa.',
+    'higiene'
+    ),
+   (
+    'https://i.pinimg.com/736x/cb/54/4d/cb544d06be4a731842c444a6126f66fa.jpg',
+    'Sabonete Líquido Corporal Rose Peach 250ml',
+90.98,
+    'Esta composição de edição limitada revela as notas suaves de um buquê de rosas, com as facetas crocantes e suculentas do pêssego, realçadas pelas notas cintilantes de toranja. O Sabonete Líquido Corporal Rose Peach limpa a pele, deixando –a delicadamente perfumada com uma fragrância floral frutada, combinando as notas suaves de um buquê de rosas com as facetas crocantes e suculentas do pêssego de videira, realçados pelas notas cintilantes da toranja. Formulada com pérolas de origem vegetal e mineral que colorem sutilmente a espuma na cor rosa, para uma experiência sensorial única!',
+    'higiene'
+    ),
+   (
+    'https://i.pinimg.com/736x/ec/91/4d/ec914daf62123f351e27a0da05adaa56.jpg',
+    'Sabonete Corporal Glicerinado Lux Botanicals Buquê de Jasmim líquido, frasco 250ml',
+21.99,
+    'O Sabonete Lux Botanicals vai te proporcionar uma espuma cremosa para transformar seu banho em um verdadeiro ritual de relaxamento! Ele conta com fórmula livre de parabenos e contém óleos hidraflorais. Além disso, a versão em barra é glicerinado, garantindo maciez, hidratação e luminosidade à pele. Limpa a pele sem agredi-la, ideal para quem gosta de um banho relaxante e revigorante.',
+    'higiene'
+    ),
+(
+    'https://res.cloudinary.com/beleza-na-web/image/upload/w_1500,f_auto,fl_progressive,q_auto:eco,w_800/v1/imagens/products/E2023040602/E2023040602_COMBO_SIAGE_ACELERA_O_CRESCIMENTO_SHAMPOO_CONDICIONADOR_PRINCIPAL_1.jpg',
+    'Combo Siàge Acelera o Crescimento: Shampoo 250ml + Condicionador 200ml',
+79.90,
+    'Este Combo Siàge Acelera o Crescimento vem com dois itens básicos para cuidar dos seus cabelos: shampoo e condicionador. A linha proporciona crescimento acelerado dos fios com força total. Sua fórmula com Prebiótico e Biotina atua diretamente no equilíbrio do couro cabeludo, ativando o metabolismo e estimulando o crescimento saudável dos cabelos.',
+    'higiene'
+    ),
+(
+    'https://i.pinimg.com/736x/00/be/a7/00bea719ab77b88023fbe86379cdbb30.jpg',
+    'Kit Shampoo + Condicionador Dabelle Hair Cachos Da Onda',
+23.99,
+    'Que tal exibir cachos e crespos definidos e cheios de onda? O shampoo cachos da onda remove as impurezas, resíduos de produtos e prepara as suas madeixas cheias de curvas para os próximos passos do tratamento. O condicionador cachos da onda alinha as cutículas para ativar a curvatura dos fios e dar mais maleabilidade às suas madeixas.',
+    'higiene'
+    ),
+(
+    'https://i.pinimg.com/736x/30/ca/63/30ca63806cf71c32cdbc30a2b348fda6.jpg',
+    'Wella Professionals Invigo Nutri-Enrich Shampoo+Condicionador 1L',
+129.99,
+    'Wella Professionals Invigo Nutri-Enrich Shampoo+Condicionador 1LKit para cabelos secos, ressecados ou quimicamente tratados em tamanho salao. Kit Wella Professionals Invigo Nutri-Enrich Salon Duo promove hidratacao e nutricao durante a limpeza e o desembaraco. Suaviza a superficie do cabelo para proporcionar muito mais brilho e maciez.Kit Wella Professionals Invigo Nutri-Enrich Salon Duo traz um blend de nutrientes multifuncionais que restauram a saude e melhoram a qualidade do cabelo. A fragrancia luxuosa e frutal chipre almiscarado. Seus fios ficam limpos, hidratados, nutridos e desembaracados.',
+    'higiene'
+    ),
+(
+    'https://i.pinimg.com/736x/e0/e7/38/e0e7385716bccd58b7fc2e2966dbcb4e.jpg',
+    'Papel Higiênico Velud Vip Folha Dupla 30M com 8 Unidades',
+15.49,
+    'O papel higiênico Velud Vip é feito de um material fino, absorvente e macio, usado para a higiene pessoal e sanitária.',
+    'higiene'
+    ),
+( 
+    'https://diafoodservice.agilecdn.com.br/9575_1.jpg',
+    'Óleo de Soja Liza Pet 900ml',
+  11.77,
+    'O Liza Soja é um óleo 100% vegetal, cinco vezes extrafiltrado, feito a partir do grão da soja. Por ser óleo de soja, o produto é fonte de Vitamina E e uma ótima opção para quem quer sabor em suas receitas sem descuidar do bem-estar de toda a família, pois os óleos vegetais possuem gorduras que contribuem com uma alimentação saudável, dentro da porção adequada de consumo. Ele não possui gorduras trans e nem glúten.',
+    'alimentos'
+    ), 
+( 
+    'https://i.pinimg.com/736x/03/86/00/038600a536bf75448b48253a5c1d85cc.jpg',
+    'Azeite Extra Virgem Gallo 500ml',
+  60.00,
+    'Azeite Gallo 500ml: O azeite tipo único é ideal para refogar e cozinhar alimentos, pois mantém suas propriedades mesmo quanto exposto à altas temperaturas. Possui sabor extra suave, adequando-se a diversos tipos de pratos. Acidez máxima 1%.',
+    'alimentos'
+    ), 
+(
+    'https://i.pinimg.com/736x/c7/7a/62/c77a62dac96614c707a2aba41f6e930f.jpg',
+    'Jogo de Panelas Cerâmica Tunis 5 Peças Tramontina'
+ 879.00,
+    'Sua cozinha transformada e o preparo das suas refeições muito mais prático, com o jogo de panelas Tramontina Tunis em alumínio com revestimento interno cerâmico e externo siliconado azul meditarrâneo 5 peças. Perfeito para lhe acompanhar diariamente, ele é composto por duas panelas, duas caçarolas e uma frigideira funda, todas produzidas em alumínio com revestimento interno cerâmico.',
+    'eletrodomésticos'
+    ),
+(
+    'https://i.pinimg.com/736x/2c/2a/b2/2c2ab2bc0a566f899ece6232cd06b873.jpg',
+    'Batedeira Mondial'
+129.00,
+    'Explore sua criatividade na cozinha com a Batedeira Mondial 110W Preta com tigela 5L. Robusta e versátil, é ideal para preparar deliciosas receitas caseiras com sabores e texturas excepcionais para sua família. Faça seus merengues, tortas e pães preferidos e muito mais.',
+    'eletrodomésticos'
+    ),
+(
+    'https://i.pinimg.com/736x/1f/5a/47/1f5a47c877c28e213816007f32b4c47f.jpg',
+    'Sanduicheira Cadence Toast & Grill Preta 750W',
+ 74.00,
+    'A partir de agora, seu lanche será preparado de forma rápida, saudável e fácil com a sanduicheira Cadence Toast & Grill SAN260 na cor preta. Ela foi projetada para levar praticidade no seu dia a dia, com 750W de potência oferecendo o preparo de variadas opções de forma fácil e muito mais saudável.',
+    'eletrodomésticos'
+    ),
+(
+    'https://i.pinimg.com/736x/9c/26/0c/9c260c8740799a42301843e5671a6e57.jpg',
+    'Kit banho para cachorro e Gato: Shampoo e Condicionador Neutro Sanol 500ml'
+38.90,
+    'Shampoo Sanol Dog Neutro traz a neutralidade da perfumação para os pets mais sensíveis aos aromas e conforto para seus donos. É composto por ingredientes que hidratam e amaciam o pelo do animal, fortificando com a queratina vegetal, junto com a neutralidade de sua perfumação. Sua fórmula biodegradável ajuda na preservação do meio ambiente.',
+    'pet'
+    ),
+(
+    'https://i.pinimg.com/736x/43/48/03/4348036ca9f7d110246be6cbf2f0a239.jpg',
+    'Ração para Gato Whiskas Premium Carne com Delicrocs 10,00KG '
+130.90,
+    'O alimento para gatos WHISKAS é nutricionalmente completo e balanceado, com um ótimo equilíbrio de vitaminas e minerais para ajudá-lo a fornecer os melhores cuidados para o seu gato adulto!',
+    'pet'
+    ),
+(
+    'https://i.pinimg.com/736x/75/14/be/7514be0deaabb73dda9431efb538fb0b.jpg',
+    'Ração Pedigree Cão 15KG Vital Adulto Raças Pequenas'
+149.99,
+    'Os produtos PEDIGREE são feitos com ingredientes cuidadosamente selecionados como antioxidantes, vitamina E e selênio, que ajudam o sistema imunológico do seu cão. Além disso, contêm Ômega 6 que ajudam na manutenção de pele e pelos saudáveis, bem como fibras e proteínas de alta qualidade que ajudam para uma ótima digestão e fezes firmes fáceis de coletar.',
+    'pet'
     );
